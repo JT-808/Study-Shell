@@ -3,6 +3,8 @@
 #Zählschleife
 # (hat Probleme bei Dateien mit Leerzeichen im Namen) -> siehe Ergebnis
 
+# for kann nicht mehr als 9 Parameter
+
 for i in $( ls );
 do
     echo item $i
@@ -21,5 +23,14 @@ done
 
 find . -iname "*"| while read f
 do
-    echo Zahl $f       
+    echo "Datei:" $f       
+done
+
+
+
+# until = solange bis
+
+until kommando_erfolgreich
+do 
+# anweisungen ...
 done
