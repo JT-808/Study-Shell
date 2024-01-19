@@ -30,6 +30,7 @@ wort3=$(head -n 3 "$datei"| tail -1 | awk '{print $'$reihe3'}')
 wort4=$(head -n 4 "$datei"| tail -1 | awk '{print $'$reihe4'}')
 wort5=$(head -n 5 "$datei"| tail -1 | awk '{print $'$reihe5'}')
 wort6=$(head -n 6 "$datei"| tail -1 | awk '{print $'$reihe6'}')
-fi
 
 echo $wort1 wird $wort2 Wetter mit ca. $wort3 Grad Celsius, $wort4 Regen, $wort5 Wind, $wort6 Sonne.
+fi
+
