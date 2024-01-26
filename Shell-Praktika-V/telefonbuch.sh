@@ -39,6 +39,8 @@ if [ "$1" == "-a" ]; then
     exit 1
 
         #überprüfung vom Eintrag schon vorhanden
+
+        # noch nicht fertig
         eintraege=$(grep -i "$2" "$datei" | grep -i "$4")
         if [ -n "$eintraege" ]; then
         echo "schon vorhanden"
