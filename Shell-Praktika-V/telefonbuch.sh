@@ -57,8 +57,13 @@ echo "erfolreich angelegt"
 fi    
 
 
+datei=./telefonbuch.dat
+if [ "$1" == "-p" ]; then
 
+# sed löscht inhalt von datein
 
-
-
-#if [ "$1" == "-d" ]; then
+sed -i -e "/$2/d" $datei
+echo gelöscht
+else 
+echo nicht gefunden
+fi
