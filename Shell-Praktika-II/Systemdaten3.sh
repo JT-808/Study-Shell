@@ -1,18 +1,17 @@
 #!/bin/bash
 set `date`
 
-Echo Heute ist $1 der $2 $3 $4.
-Echo Mein aktuelles Verzeichnis ist `pwd`.
-Echo Angemeldet bin ich als `whoami` am Host `HOSTNAME`, der Terminaltyp ist $TERM .
-Echo Derzeit sind an diesem Rechner $(who | wc -l) zugangsberechtigte Nutzer eingeloggt.
-echo ************************************************************ ENDE SYSTEMDATEN
-
-
-
-echo Wiederholung?
 
 while :
 do             # <- Endlosschleife
+echo Heute ist $1 der $2 $3 $4.
+echo Mein aktuelles Verzeichnis ist `pwd`.
+echo Angemeldet bin ich als `whoami` am Host $HOSTNAME, der Terminaltyp ist $TERM .
+echo Derzeit sind an diesem Rechner $(who | wc -l) zugangsberechtigte Nutzer eingeloggt.
+echo ************************************************************ ENDE SYSTEMDATEN
+echo Wiederholung?
+
+
   echo "1" ja
   echo "2" nein
 echo "Zahl eingeben"
@@ -23,7 +22,5 @@ case $TEMP in
     2) break ;;
 esac
 done 
-
-
 
 

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ $# -eq 0 ]; then
     eval $(head -13 $0 | tail -1)
     exit 1

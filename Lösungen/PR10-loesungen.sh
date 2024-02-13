@@ -175,15 +175,15 @@ fi
 # Wetter ausgeben
 str=()
 k=0
-# Datei wetter zeilenweise lesen
+# Datei wetter zeilenweise lesen (read => zeilenweise lesen (bei jeden Durchgang, wechselt er die Zeile))
 while read zeile
 do
     # Woerter der Zeile zaehlen
     n=`echo $zeile | wc -w`
     # Zufallszahl zwischen 1 und n
-    let l=$RANDOM%$n+1
-    # l-te Spalte in der Zeile merken
-    str[k]=`echo "$zeile" | cut -f $l`
+    let P=$RANDOM%$n+1
+    # P-te Spalte in der Zeile merken
+    str[k]=`echo "$zeile" | cut -f $P`
     let k=k+1
 done < $dateiname
 if [ $long -eq 1 ]

@@ -16,7 +16,7 @@ if [ $ezahl -lt $zzahl ]; then
 echo zu klein
 elif [ $ezahl -gt $zzahl ]; then
 echo zu groß
-else RICHTIG!
+else echo "RICHTIG!"
 fi
 fi
 echo $counter
